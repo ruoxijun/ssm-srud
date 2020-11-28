@@ -1,12 +1,18 @@
 package ruoxijun.bean;
 
+import javax.validation.constraints.Pattern;
+
 public class Employee {
     private Integer empId;
 
+    @Pattern(regexp = "(^[a-zA-Z0-9]{4,12}$)|(^[\\u2E80-\\u9FFF]{2,5}$)",
+            message = "名字格式有误,可以是2-5位中文或4-12位英文和数字的组合")
     private String empName;
 
     private String gender;
 
+    @Pattern(regexp = "^([a-zA-Z0-9_\\.\\-])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,4})+$",
+            message = "邮箱输入格式有误")
     private String email;
 
     private Integer dId;

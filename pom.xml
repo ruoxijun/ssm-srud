@@ -124,6 +124,13 @@
       <artifactId>pagehelper</artifactId>
       <version>5.2.0</version>
     </dependency>
+
+    <!-- jsr 303 数据校验 -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>6.1.0.Final</version>
+    </dependency>
   </dependencies>
 
   <build>
